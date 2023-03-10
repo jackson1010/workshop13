@@ -1,0 +1,30 @@
+  .section_form p {
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 54px;
+    line-height: 54px;
+    border: 1px solid black;
+    border-radius: 3px;
+    background: white;
+    margin-bottom: 15px;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .section_form label, .section_form p {
+    display: inline-block;
+}
+  
+  .section_form p:hover {
+    transform: scale(1.009);
+    box-shadow: 0px 0px 3px 0px #7bacdd;
+  }
+  
+
+  

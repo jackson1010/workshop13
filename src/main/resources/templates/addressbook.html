@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{addressbook.css}">
+    <style>
+        .error{
+            color: brown;
+        }
+        
+        #consultation-form{
+            margin-left: 10px;
+        }
+    </style>
+    <title>Address Book</title>
+</head>
+
+<body>
+    <h1> Your Contact information</h1>
+    <section class="section_form"></section>
+    <form id="consultation-form" class="feed-form" action="#" data-th-action="@{/contact}" data-th-object="${contactModel}" method="post">
+            <input type="text" id="fname" data-th-field="*{name}" placeholder="Name" />
+            <span class="error" data-th-if="${#fields.hasErrors('name')}" data-th-errors="*{name}"></span>
+            
+            <input type="text" id="femail" data-th-field="*{email}" placeholder="Email" />
+            <span class="error" data-th-if="${#fields.hasErrors('email')}" data-th-errors="*{email}"></span>
+            
+            <input type="text" id="fPhoneNumber" data-th-field="*{phoneNumber}" placeholder="PhoneNumber" />
+            <span class="error" data-th-if="${#fields.hasErrors('phoneNumber')}" data-th-errors="*{phoneNumber}"></span>
+            
+            <input type="date" id="fDateOfBirth" data-th-field="*{dateOfBirth}" placeholder="PhoneNumber" />
+            <span class="error" data-th-if="${#fields.hasErrors('dateOfBirth')}" data-th-errors="*{dateOfBirth}"></span>
+            <span class="error" data-th-if="${#fields.hasErrors('age')}" data-th-errors="*{age}"></span>
+            <button class="button_submit">SAVE</button>
+    </section>
+
+
+</body>
+
+</html>

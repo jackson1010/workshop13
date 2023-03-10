@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="showContact.css" />
+    <title>Document</title>
+    <style>
+        #fid{
+            margin-left: 103px;
+        }
+        #fname{
+            margin-left: 80px;
+        }
+        #femail{
+            margin-left: 80px;
+        }
+        #fphonenumber{
+            margin-left: 22px;
+        }
+        #fdateofbirth{
+            margin-left: 33px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Your Contact information</h1>
+    <section class="section_form">
+      <div data-th-object="${contactModel}">
+        
+        <label for="fid">ID:</label>
+        <p id="fid"data-th-text="*{id}"></p>
+        <br>
+        <label for="fname">Name:</label>
+        <p id ="fname" data-th-text="*{name}"></p>
+        <br>
+        <label for="femail">Email:</label>
+        <p id="femail" data-th-text="*{email}"></p>
+        <br>
+        <label for="fphonenumber">Phone Number:</label>
+        <p id="fphonenumber" data-th-text="*{phoneNumber}"></p>
+        <br>
+        <label for="fdateofbirth">Date of Birth:</label>
+        <p id="fdateofbirth" data-th-text="*{dateOfBirth}"></p>
+      </div>
+    </section>
+  </body>
+</html>
